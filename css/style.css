@@ -130,3 +130,11 @@ ul{
     padding-top: 5px;
 }
 
+.inputs:invalid {
+    background-color: #ed1c1c;
+}
+
+
+.inputs:valid {
+    background-color: #ddfeff;
+}
