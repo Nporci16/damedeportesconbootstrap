@@ -1,3 +1,6 @@
+@import "variables";
+
+
 *{
     margin: 0;
     padding: 0;
@@ -12,22 +15,22 @@ html{
 body{
     height: 100%;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(201,8,8,1) 0%, rgba(0,212,255,1) 100%)
+    background: $background-container;
 }
 
 ul {
     list-style: none;
     display: inline-flex;
         li {
-            a:hover{
+            a{
+                text-decoration: none;
+                &:hover{
                 background-color: white;
+                }
             }
         }
     }
 
-h3{
-    margin: 20px;
-}
 
 @media (max-width:1230px) {
     .conteiner {
@@ -45,7 +48,7 @@ h3{
     display: grid;
     min-height: 100vh;
     grid-template-columns:550px auto;
-    grid-template-rows: 90px auto max-content;
+    grid-template-rows: 90px auto 110px;
     grid-template-areas:
     "gridhead gridhead"
     "gridaside gridmain"
@@ -58,7 +61,7 @@ h3{
     justify-content: end;
     top: 0;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(236,118,118,1) 39%, rgba(0,212,255,1) 100%);
+    background: $background-container;
     padding-top: 20px;
 }
 .navbar-brand{
@@ -72,9 +75,10 @@ h3{
 }
 
 .gridaside{
+    grid-area: gridaside;
     color: white;
     background: rgb(0,0,0);
-    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(119,120,123,1) 44%, rgba(0,0,0,1) 100%);
+    background: $background-aside;
         img{
             width: 460px;
             height: 275px;
@@ -83,15 +87,18 @@ h3{
         h2{
             margin: 20px;
         }
-            p{
-                margin: 10px;
-            }
+        h3{
+            margin: 20px;
+        }
+        p{
+            margin: 10px;
+        }
 }
 
 .gridmain{
     grid-area: gridmain;
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(201,8,8,1) 0%, rgba(0,212,255,1) 100%);
+    background: $background-container;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -112,7 +119,7 @@ h3{
     grid-area: gridfooter;
     display: flex;
     justify-content: flex-end;
-    background-color: rgb(124, 6, 6);
+    background-color: $background-footer;
     color: azure;
         p{
             display: flex;
