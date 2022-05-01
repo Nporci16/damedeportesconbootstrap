@@ -32,6 +32,18 @@ ul {
     }
 
 
+
+.conteiner {  
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns:550px auto;
+    grid-template-rows: 90px auto 140px;
+    grid-template-areas:
+    "gridhead gridhead"
+    "gridaside gridmain"
+    "gridfooter gridfooter";
+}
+
 @media (max-width:1230px) {
     .conteiner {
         grid-template-areas: 
@@ -44,16 +56,7 @@ ul {
     }
 }
 
-.conteiner {  
-    display: grid;
-    min-height: 100vh;
-    grid-template-columns:550px auto;
-    grid-template-rows: 90px auto 110px;
-    grid-template-areas:
-    "gridhead gridhead"
-    "gridaside gridmain"
-    "gridfooter gridfooter";
-}
+
 
 .gridhead{
     grid-area: gridhead;
@@ -100,8 +103,10 @@ ul {
     background: rgb(2,0,36);
     background: $background-container;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     gap: 10px;
+    margin: 10px 0px 10px 10px;
+    justify-content: center;
         h1{
             text-decoration: underline;
             margin: 20px;
@@ -109,11 +114,15 @@ ul {
         img{
             justify-content: center;
             align-items: center;
-            width: 460px;
-            height: 275px;
+            width: 250px;
+            height: 200px;
             margin: 20px;
         }
+        .card{
+            background-color: rgb(156, 147, 147);
+        }
 }
+
 
 .gridfooter{
     grid-area: gridfooter;
@@ -122,9 +131,7 @@ ul {
     background-color: $background-footer;
     color: azure;
         p{
-            display: flex;
             margin-right: 10px;
-            justify-content: flex-end;
         }
         a{
             margin-right: 10px;
@@ -137,6 +144,26 @@ ul {
             padding-top: 5px;
         }
 }
+
+.map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        ul {
+            list-style: none;
+            display: inline-flex;
+            flex-direction: column;
+                li {
+                    a{
+                        text-decoration: none;
+                        &:hover{
+                        background-color: black;
+                        }
+                    }
+                }
+            }
+}
+
 
 
 .inputs:invalid {
