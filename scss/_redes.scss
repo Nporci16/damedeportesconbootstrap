@@ -1,0 +1,12 @@
+$Redes: (
+/*Declaramos nuestro mapa*/
+    Facebook: #3a5795,
+    Instagram: #C25E30);
+
+/*Creamos el bucle para usar los valores del mapa*/
+@each $red,
+$color in $Redes {
+    .btn--#{$red} {
+    background-color: $color;
+    }
+}

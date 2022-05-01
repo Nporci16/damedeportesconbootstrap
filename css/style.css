@@ -1,4 +1,17 @@
 /* Fondos */
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--Facebook {
+  background-color: #3a5795; }
+
+.btn--Instagram {
+  background-color: #C25E30; }
+
+.titles {
+  font-size: 40px;
+  color: #b0afaf;
+  strong: strong;
+  margin: 20px; }
+
 * {
   margin: 0;
   padding: 0;
@@ -62,10 +75,6 @@ ul {
   .gridaside img {
     width: 460px;
     height: 275px;
-    margin: 20px; }
-  .gridaside h2 {
-    margin: 20px; }
-  .gridaside h3 {
     margin: 20px; }
   .gridaside p {
     margin: 10px; }
