@@ -1,0 +1,11 @@
+$estilos: (
+    color: rgb(156, 147, 147),
+    centro: center,
+    tFuente: 15px,
+);
+
+.card {
+    background-color: map-get($estilos, color);
+    text-align: map-get($estilos, centro);
+    font-size:map-get($estilos, tFuente);
+}

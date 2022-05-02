@@ -9,8 +9,12 @@
 .titles {
   font-size: 40px;
   color: #b0afaf;
-  strong: strong;
   margin: 20px; }
+
+.card {
+  background-color: #9c9393;
+  text-align: center;
+  font-size: 15px; }
 
 * {
   margin: 0;
@@ -86,7 +90,7 @@ ul {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  margin: 10px 0px 10px 10px;
+  margin: 0px 10px 10px 10px;
   justify-content: center; }
   .gridmain h1 {
     text-decoration: underline;
@@ -97,8 +101,6 @@ ul {
     width: 250px;
     height: 200px;
     margin: 20px; }
-  .gridmain .card {
-    background-color: #9c9393; }
 
 .gridfooter {
   grid-area: gridfooter;

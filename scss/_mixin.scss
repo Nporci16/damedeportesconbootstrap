@@ -1,10 +1,9 @@
-@mixin sizes($color, $font-size, $strong, $margin) {
+@mixin sizes($color, $font-size, $margin) {
     font-size: $font-size;
     color: $color;
-    strong: $strong;
     margin: $margin;
 }
 .titles {
-    @include sizes(rgb(176, 175, 175), 40px, strong, 20px)
+    @include sizes(rgb(176, 175, 175), 40px, 20px)
 }
 
