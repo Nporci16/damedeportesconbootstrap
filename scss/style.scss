@@ -1,8 +1,7 @@
 @import "variables";
-@import "redes";
 @import "mixin";
 @import "map";
-
+@import "extend";
 
 *{
     margin: 0;
@@ -47,17 +46,6 @@ ul {
     "gridfooter gridfooter";
 }
 
-@media (max-width:1230px) {
-    .conteiner {
-        grid-template-areas: 
-            "gridhead"
-            "gridaside"
-            "gridmain"
-            "gridfooter";
-        grid-template-columns: auto;
-        grid-template-rows: auto;
-    }
-}
 
 
 
@@ -95,6 +83,7 @@ ul {
         }
 }
 
+
 .gridmain{
     grid-area: gridmain;
     background: rgb(2,0,36);
@@ -110,11 +99,15 @@ ul {
         }
         img{
             justify-content: center;
-            align-items: center;
+            align-items: center;    
             width: 250px;
             height: 200px;
             margin: 20px;
         }
+        .card{
+            align-items: center;
+        }
+    
 }
 
 
@@ -170,23 +163,34 @@ ul {
     background-color: #ddfeff;
 }
 
-
-
-.boton {
-	width:140px;
-	height:30px;
-	text-align:center;
-	border-radius:20px;
-	border:1px solid black;
-    color:black;
+@media (max-width:1230px) {
+    .conteiner {
+        grid-template-areas: 
+            "gridhead"
+            "gridaside"
+            "gridmain"
+            "gridfooter";
+        grid-template-columns: auto;
+        grid-template-rows: auto;
+    }
 }
 
-.boton--aceptar{
-	@extend .boton;
-	background-color:green;
-}
-
-.boton--cancelar{
-	@extend .boton;
-	background-color:red;
+@media (max-width:768px) {
+    .gridaside{
+        img{
+            width: 200px;
+            height: 145px;
+            margin: 10px;
+        }
+        p{
+            margin: 5px;
+            }
+    }
+    .gridmain{
+        img{
+            width: 180px;
+            height: 120px;
+            margin: 5px;
+        }
+    }
 }

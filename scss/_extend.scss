@@ -10,13 +10,13 @@
     border: 1px solid black;
 }
 
-.boton--Enviar {
+.boton--enviar {
     @extend .boton1;
     background-color: blue;
     color: grey;
 }
 
-.boton--Borrar {
+.boton--borrar {
     @extend .boton1;
     background-color: grey;
     color: blue;
